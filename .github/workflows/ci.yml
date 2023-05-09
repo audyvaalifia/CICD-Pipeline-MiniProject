@@ -17,8 +17,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Set Maven POM location
-        run: cd C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline/pom.xml
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
 #        working-directory: C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline
