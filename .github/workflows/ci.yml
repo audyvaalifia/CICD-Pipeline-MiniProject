@@ -21,18 +21,18 @@ jobs:
         run: mvn --batch-mode --update-snapshots package
 #        working-directory: C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline
   test:
-    name: TEST WEB API AUTOMATION MINI PROJECT
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v2
         with:
           java-version: '17'
           distribution: 'temurin'
       - name: Test API Mini Project
         run: |
           cd CICD-Pipeline-MiniProject
-          mvn --batch-mode --update-snapshots verify
+          mvn verify
 
 #        working-directory: C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline
