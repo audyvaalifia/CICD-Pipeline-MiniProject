@@ -21,18 +21,19 @@ jobs:
         run: mvn --batch-mode --update-snapshots package
 #        working-directory: C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline
   test:
-    name: Test
+    name: TEST WEB API AUTOMATION MINI PROJECT
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 17
-        uses: actions/setup-java@v2
-        with:
-          java-version: '17'
-          distribution: 'temurin'
+      - name: Check if directory exists
+        run: |
+          if [ ! -d "CICD-Pipeline-MiniProject" ]; then
+            echo "Directory not found"
+            exit 1
+          fi
       - name: Test API Mini Project
         run: |
           cd CICD-Pipeline-MiniProject
           mvn verify
+
 
 #        working-directory: C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline
