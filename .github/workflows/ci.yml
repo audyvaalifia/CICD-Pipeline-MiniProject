@@ -25,5 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test API Mini Project
-        run: mvn clean verify
+        run: |
+          cd CICD-Pipeline-MiniProject
+          mvn verify
 #        working-directory: C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline
