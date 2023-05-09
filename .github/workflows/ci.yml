@@ -24,8 +24,15 @@ jobs:
     name: TEST WEB API AUTOMATION MINI PROJECT
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
       - name: Test API Mini Project
         run: |
           cd CICD-Pipeline-MiniProject
-          mvn verify
+          mvn --batch-mode --update-snapshots verify
+
 #        working-directory: C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline
