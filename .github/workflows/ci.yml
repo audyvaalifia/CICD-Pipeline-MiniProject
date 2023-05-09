@@ -27,10 +27,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Ensure directory exists
         run: |
-          if [ ! -d "CICD-Pipeline-MiniProject" ]; then
-            echo "Directory not found"
-            exit 1
-          fi
+          mkdir -p CICD-Pipeline-MiniProject
+
       - name: Test API Mini Project
         run: |
           cd CICD-Pipeline-MiniProject
