@@ -17,7 +17,7 @@ public class PostReg {
     @Step("I send POST HTTP Request")
     public void sendPostHttpRequest(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "boboiboytaufan12@gmail.com");
+        requestBody.put("email", "boboiboytaufan18@gmail.com");
         requestBody.put("password", "sayaganteng123");
         requestBody.put("fullname", "Boboiboy Taufan bin Amat");
 
@@ -31,7 +31,7 @@ public class PostReg {
     }
     @Step("I receive valid data for product category")
     public void validateDataRatingProduct(){
-        restAssuredThat(response -> response.body("'data'.'Email'", equalTo("boboiboytaufan12@gmail.com")));
+        restAssuredThat(response -> response.body("'data'.'Email'", equalTo("boboiboytaufan18@gmail.com")));
         restAssuredThat(response -> response.body("'data'.'Password'", equalTo("sayaganteng123")));
 
     }
