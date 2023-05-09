@@ -19,11 +19,11 @@ jobs:
           distribution: 'temurin'
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
-        working-directory: C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline
+#        working-directory: C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline
   test:
     name: TEST WEB API AUTOMATION MINI PROJECT
     runs-on: ubuntu-latest
     steps:
       - name: Test API Mini Project
         run: mvn clean verify
-        working-directory: C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline
+#        working-directory: C:\\Users\\VICTUS\\IdeaProjects\\MiniProjectCICDPipeline
